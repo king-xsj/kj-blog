@@ -1,25 +1,25 @@
 <template>
     <div id="home">
         <!-- 页头 -->
-        <kila-kila-header />
+        <kim-header />
 
         <!-- 封面 -->
-        <kila-kila-cover imgUrl="assets/image/home-cover.jpg" title="✨ Kila Kila Blog ✨"
-            content="雄关漫道真如铁，而今迈步从头越"></kila-kila-cover>
+        <kim-cover imgUrl="assets/image/home-cover.jpg" title="Kj Blog"
+            content="书山有路勤为径，学海无涯苦作舟"></kim-cover>
 
         <div class="container">
             <!-- 侧边栏 -->
             <div class="side-content">
-                <kila-kila-admin-card />
-                <kila-kila-hot-article-card />
-                <kila-kila-category-card />
-                <kila-kila-tag-card />
-                <kila-kila-archive-card />
+                <kim-admin-card />
+                <kim-hot-article-card />
+                <kim-category-card />
+                <kim-tag-card />
+                <kim-archive-card />
             </div>
 
             <!-- 发表的文章 -->
             <div class="post-article-list">
-                <kila-kila-post-article-card v-for="(article, index) in postArticles" :key="article.id"
+                <kim-post-article-card v-for="(article, index) in postArticles" :key="article.id"
                     :article="article" :reverse="index % 2 == 1" />
 
                 <!-- 分页 -->
@@ -29,10 +29,10 @@
         </div>
 
         <!-- 页脚 -->
-        <kila-kila-footer :adminName="$store.state.adminAbout.adminInfo.nickName" />
+        <kim-footer :adminName="$store.state.adminAbout.adminInfo.nickName" />
 
         <!-- 滚动到顶部按钮 -->
-        <kila-kila-back-to-top />
+        <kim-back-to-top />
     </div>
 </template>
 

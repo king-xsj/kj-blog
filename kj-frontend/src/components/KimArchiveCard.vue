@@ -25,7 +25,7 @@ import { reactive } from "@vue/reactivity";
 import { getArchiveCountList } from "../api/archive";
 
 export default {
-    name: "KilaKilaArchiveCard",
+    name: "KimArchiveCard",
     setup() {
         let archiveCounts = reactive([]);
 

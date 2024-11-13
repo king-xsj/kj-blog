@@ -1,22 +1,22 @@
 <template>
     <div id="archive-details">
         <!-- 页头 -->
-        <kila-kila-header />
+        <kim-header />
 
         <!-- 二次元封面 -->
-        <kila-kila-wife-cover>
+        <kim-wife-cover>
             <div class="archive-info">
                 <h1 class="archive-date">{{ year }} 年 {{ month }} 月</h1>
             </div>
-        </kila-kila-wife-cover>
+        </kim-wife-cover>
 
         <div class="container">
             <!-- 侧边栏 -->
-            <kila-kila-side-bar />
+            <kim-side-bar />
 
             <!-- 发表的文章 -->
             <div class="post-article-list">
-                <kila-kila-post-article-card v-for="(article, index) in postArticles" :key="article.id"
+                <kim-post-article-card v-for="(article, index) in postArticles" :key="article.id"
                     :article="article" :reverse="index % 2 == 1" />
 
                 <!-- 分页 -->
@@ -27,10 +27,10 @@
         </div>
 
         <!-- 页脚 -->
-        <kila-kila-footer />
+        <kim-footer />
 
         <!-- 回到顶部 -->
-        <kila-kila-back-to-top />
+        <kim-back-to-top />
     </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
     <div id="article-details">
         <!-- 页头 -->
-        <kila-kila-header />
+        <kim-header />
 
         <!-- 二次元封面 -->
-        <kila-kila-wife-cover>
+        <kim-wife-cover>
             <div class="article-info">
                 <h1 class="article-title">
                     {{ articleDetails.title }}
@@ -28,17 +28,17 @@
                     </span>
                 </div>
             </div>
-        </kila-kila-wife-cover>
+        </kim-wife-cover>
 
         <div class="container">
             <!-- 侧边栏 -->
-            <kila-kila-side-bar>
-                <kila-kila-admin-card />
+            <kim-side-bar>
+                <kim-admin-card />
                 <div class="sticky-layout">
-                    <kila-kila-catalog-card v-if="articleLoaded" />
-                    <kila-kila-hot-article-card />
+                    <kim-catalog-card v-if="articleLoaded" />
+                    <kim-hot-article-card />
                 </div>
-            </kila-kila-side-bar>
+            </kim-side-bar>
 
             <!-- 文章内容 -->
             <div class="post-body">
@@ -127,7 +127,7 @@
 
                     <!-- 评论 -->
                     <div id="comment-items">
-                        <kila-kila-comment-item v-for="(comment, index) in comments" :key="comment.id"
+                        <kim-comment-item v-for="(comment, index) in comments" :key="comment.id"
                             :comment="comment" :floorNumber="(currentCommentPageNum - 1) * commentPageSize + index + 1"
                             @reply="onReplyComment" @update="onUpdateComment" @delete="onDeleteComment" />
                     </div>
@@ -154,13 +154,13 @@
         </div>
 
         <!-- 回到顶部 -->
-        <kila-kila-back-to-top />
+        <kim-back-to-top />
 
         <!-- 图片查看器 -->
-        <kila-kila-light-box ref="lightBoxRef" v-if="articleLoaded" />
+        <kim-light-box ref="lightBoxRef" v-if="articleLoaded" />
 
         <!-- 页脚 -->
-        <kila-kila-footer />
+        <kim-footer />
     </div>
 </template>
 

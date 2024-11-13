@@ -1,7 +1,7 @@
 <template>
     <div class="admin-menu">
-        <kila-kila-admin-card />
-        <kila-kila-divider />
+        <kim-admin-card />
+        <kim-divider />
         <el-menu>
             <!-- 首页 -->
             <el-menu-item index="1" @click="$router.push('/')">
@@ -77,7 +77,7 @@
             <!-- 个人中心 -->
             <el-menu-item index="6" @click="$router.push('/user/settings')">
                 <font-awesome-icon :icon="['fas', 'user']" class="menu-icon" />
-                <span>个人中心</span>
+                <span>个人中心1</span>
             </el-menu-item>
         </el-menu>
     </div>
@@ -85,7 +85,7 @@
 
 <script>
 export default {
-    name: "KilaKilaAdminMenu",
+    name: "KimAdminMenu",
 };
 </script>
 

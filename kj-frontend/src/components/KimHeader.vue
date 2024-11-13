@@ -1,7 +1,7 @@
 <template>
     <header>
         <router-link class="header-title" to="/"
-            >✨ Kila Kila Blog ✨</router-link
+            >KJ Blog</router-link
         >
         <div class="header-menu">
             <div v-for="item in menuItems" :key="item.name">
@@ -25,7 +25,7 @@
             :with-header="false"
             size="40%"
         >
-            <kila-kila-admin-menu />
+            <kim-admin-menu />
         </el-drawer>
     </header>
 </template>
@@ -35,7 +35,7 @@ import { reactive, ref } from "vue";
 import store from "../store";
 
 export default {
-    name: "KilaKilaHeader",
+    name: "KimHeader",
     setup() {
         let drawer = ref(false);
         let menuItems = reactive([

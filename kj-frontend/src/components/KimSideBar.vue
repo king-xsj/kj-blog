@@ -2,18 +2,18 @@
     <!-- 侧边栏 -->
     <div id="side-bar">
         <slot>
-            <kila-kila-admin-card />
-            <kila-kila-hot-article-card />
-            <kila-kila-category-card />
-            <kila-kila-tag-card />
-            <kila-kila-archive-card />
+            <kim-admin-card />
+            <kim-hot-article-card />
+            <kim-category-card />
+            <kim-tag-card />
+            <kim-archive-card />
         </slot>
     </div>
 </template>
 
 <script>
 export default {
-    name: "KilaKilaSideBar"
+    name: "KimSideBar"
 }
 </script>
 

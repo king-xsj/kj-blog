@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-        <kila-kila-form-card title="欢迎小老弟回家">
+        <kim-form-card title="欢迎小老弟回家">
             <el-form
                 ref="ruleFormRef"
                 :model="ruleForm"
@@ -48,8 +48,8 @@
 
                 <!-- 登录按钮 -->
                 <el-form-item>
-                    <kila-kila-button @click="submitForm(ruleFormRef)"
-                        >登录</kila-kila-button
+                    <kim-button @click="submitForm(ruleFormRef)"
+                        >登录</kim-button
                     >
                 </el-form-item>
             </el-form>
@@ -57,7 +57,7 @@
                 小老弟还没有账号？
                 <router-link to="/register">快来注册一个吧！</router-link>
             </p>
-        </kila-kila-form-card>
+        </kim-form-card>
     </div>
 </template>
 

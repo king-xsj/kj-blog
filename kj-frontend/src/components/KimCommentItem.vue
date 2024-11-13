@@ -63,7 +63,7 @@ import { getUserInfo } from "../utils/storage";
 
 
 export default {
-    name: "KilaKilaCommentItem",
+    name: "KimCommentItem",
     props: {
         comment: {
             type: Object,

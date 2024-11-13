@@ -42,7 +42,7 @@ import { reactive } from "vue";
 import { useDefaultThumbnail } from "../utils/thumbnail";
 
 export default {
-    name: "KilaKilaPostArticleCard",
+    name: "KimPostArticleCard",
     props: {
         article: {
             type: Object,

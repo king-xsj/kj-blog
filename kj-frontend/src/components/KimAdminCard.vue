@@ -78,7 +78,7 @@ import { mapState } from "../store/map";
 import { computed } from "vue";
 
 export default {
-    name: "KilaKilaAdminCard",
+    name: "KimAdminCard",
     setup() {
         let { adminInfo, articleCountInfo } = mapState("adminAbout");
 

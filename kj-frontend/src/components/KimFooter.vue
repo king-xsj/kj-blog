@@ -34,7 +34,7 @@ import { ref, computed, onBeforeUnmount } from "vue";
 import { useStore } from "vuex";
 import { getRunTime } from "../utils/date";
 export default {
-    name: "KilaKilaFooter",
+    name: "KimFooter",
     setup() {
         let year = ref(new Date().getFullYear());
         let currentTime = ref(new Date().getTime());

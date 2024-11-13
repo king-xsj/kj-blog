@@ -1,5 +1,5 @@
 <template>
-    <kila-kila-card :icon="['fas', 'tags']" iconColor="#db669f" title="标签">
+    <kim-card :icon="['fas', 'tags']" iconColor="#db669f" title="标签">
         <div class="tag-clouds">
             <router-link
                 class="tag-item"
@@ -10,7 +10,7 @@
                 >{{ tag.name }}</router-link
             >
         </div>
-    </kila-kila-card>
+    </kim-card>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ import { linearColorWordCloud } from "../utils/word-cloud";
 import { computed } from "@vue/runtime-core";
 
 export default {
-    name: "KilaKilaTagCard",
+    name: "KimTagCard",
     setup() {
         let { tagCounts } = mapState("tagAbout");
         let tagClouds = computed(() => linearColorWordCloud(tagCounts.value));

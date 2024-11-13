@@ -13,7 +13,7 @@ import { reactive, ref } from "vue";
 import VueEasyLightbox from "vue-easy-lightbox";
 
 export default {
-    name: "KilaKilaLightBox",
+    name: "KimLightBox",
     components: { VueEasyLightbox },
     props: {
         container: {

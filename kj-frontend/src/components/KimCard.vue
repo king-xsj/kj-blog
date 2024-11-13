@@ -15,7 +15,7 @@
 <script>
 import { reactive } from "@vue/reactivity";
 export default {
-    name: "KilaKilaCard",
+    name: "KimCard",
     props: {
         title: {
             type: String,

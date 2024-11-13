@@ -35,7 +35,7 @@
 import { reactive, ref } from "vue";
 
 export default {
-    name: "KilaKilaCatalog",
+    name: "KimCatalog",
     setup(props) {
         let titles = reactive(getTitles());
         let currentTitle = reactive({});

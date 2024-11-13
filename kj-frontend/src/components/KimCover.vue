@@ -16,7 +16,7 @@ import { ArrowDown } from "@element-plus/icons-vue";
 import createParticles from "../utils/text-effect";
 
 export default {
-    name: "KilaKilaCover",
+    name: "KimCover",
     components: {
         ArrowDown,
     },

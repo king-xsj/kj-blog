@@ -1,16 +1,16 @@
 <template>
     <div id="arctile-edit">
         <!-- 页头 -->
-        <kila-kila-header />
+        <kim-header />
 
         <!-- 二次元封面 -->
-        <kila-kila-wife-cover>
+        <kim-wife-cover>
             <h1>{{ title }}</h1>
-        </kila-kila-wife-cover>
+        </kim-wife-cover>
 
         <!-- 编辑表单 -->
         <div class="edit-card">
-            <h1 class="kila-kila-blog-title">✨ Kila Kila Blog ✨</h1>
+            <h1 class="kim-blog-title">✨ Kila Kila Blog ✨</h1>
             <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="60px" class="edit-ruleForm">
                 <!-- 标题 -->
                 <el-form-item prop="title" label="标题">
@@ -46,7 +46,7 @@
 
                 <!-- 缩略图 -->
                 <el-form-item prop="thumbnail" label="缩略图">
-                    <kila-kila-uploader @uploaded="handleThumbnailUploaded"
+                    <kim-uploader @uploaded="handleThumbnailUploaded"
                         @aboutToUpload="handleAboutToUploadThumbnail" @removed="handleRemoveThumbnail"
                         ref="uploaderRef" />
                 </el-form-item>
@@ -63,7 +63,7 @@
         </div>
 
         <!-- 页脚 -->
-        <kila-kila-footer />
+        <kim-footer />
     </div>
 </template>
 
@@ -283,7 +283,7 @@ export default {
     box-sizing: border-box;
     animation: fadeInUp 1s;
 
-    .kila-kila-blog-title {
+    .kim-blog-title {
         text-align: center;
         font-size: 26px;
         font-family: "Kanit";

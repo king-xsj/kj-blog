@@ -1,25 +1,25 @@
 <template>
     <div id="tag-list">
         <!-- 页头 -->
-        <kila-kila-header />
+        <kim-header />
 
         <!-- 二次元封面 -->
-        <kila-kila-wife-cover>
+        <kim-wife-cover>
             <h1>标签</h1>
-        </kila-kila-wife-cover>
+        </kim-wife-cover>
 
         <div class="container">
             <!-- 侧边栏 -->
-            <kila-kila-side-bar />
+            <kim-side-bar />
 
-            <kila-kila-word-cloud-card :words="tagCounts" baseUrl="/tag" />
+            <kim-word-cloud-card :words="tagCounts" baseUrl="/tag" />
         </div>
 
         <!-- 页脚 -->
-        <kila-kila-footer />
+        <kim-footer />
 
         <!-- 回到顶部 -->
-        <kila-kila-back-to-top />
+        <kim-back-to-top />
     </div>
 </template>
 

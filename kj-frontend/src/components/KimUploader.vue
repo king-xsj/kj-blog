@@ -107,7 +107,7 @@ import VueEasyLightbox from "vue-easy-lightbox";
 import { ElMessage } from 'element-plus/lib/components';
 
 export default {
-    name: "KilaKilaUploader",
+    name: "KimUploader",
     emits: ["uploaded", "aboutToUpload", "removed"],
     components: { Plus, VueEasyLightbox },
     setup(props, context) {

@@ -1,5 +1,5 @@
 <template>
-    <kila-kila-card
+    <kim-card
         :icon="['fas', 'fire']"
         iconColor="#f01111"
         title="热门文章"
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-    </kila-kila-card>
+    </kim-card>
 </template>
 
 <script>
@@ -41,7 +41,7 @@ import { reactive } from "@vue/reactivity";
 import { defaultThumbnail, useDefaultThumbnail } from "../utils/thumbnail";
 
 export default {
-    name: "KilaKilaHotArticleCard",
+    name: "KimHotArticleCard",
     setup() {
         let hotArticles = reactive([]);
 

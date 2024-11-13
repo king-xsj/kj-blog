@@ -2,7 +2,7 @@
     <el-card class="box-card">
         <template #header>
             <div class="card-header">
-                <h2>✨ Kila Kila Blog ✨</h2>
+                <h2>Blog</h2>
             </div>
         </template>
 
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: "KilaKilaFormCard",
+    name: "KimFormCard",
     props: {
         title: {
             type: String,

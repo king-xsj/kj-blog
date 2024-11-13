@@ -17,7 +17,7 @@
 import { computed } from "vue";
 import { randomColorWordCloud } from "../utils/word-cloud";
 export default {
-    name: "KilaKilaWordCloudCard",
+    name: "KimWordCloudCard",
     emits: ["wordClicked"],
     props: {
         words: {
