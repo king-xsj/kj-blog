@@ -1,4 +1,4 @@
-# kilakila-frontend
+# kj-frontend
 
 ## Project setup
 ```
