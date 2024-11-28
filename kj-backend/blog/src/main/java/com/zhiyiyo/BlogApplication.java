@@ -10,6 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 public class BlogApplication {
     public static void main(String[] args) {
+        System.out.println("helow word");
         SpringApplication.run(BlogApplication.class, args);
     }
 }
