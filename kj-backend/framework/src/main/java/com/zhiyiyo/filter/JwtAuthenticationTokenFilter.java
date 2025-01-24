@@ -1,14 +1,11 @@
 package com.zhiyiyo.filter;
 
-import com.alibaba.fastjson.JSON;
 import com.zhiyiyo.constants.SystemConstants;
-import com.zhiyiyo.domain.ResponseResult;
 import com.zhiyiyo.domain.entity.LoginUser;
 import com.zhiyiyo.enums.AppHttpCodeEnum;
 import com.zhiyiyo.exception.SystemException;
 import com.zhiyiyo.utils.JwtUtil;
 import com.zhiyiyo.utils.RedisCache;
-import com.zhiyiyo.utils.WebUtils;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -68,6 +65,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     }
 
     private void resolveException(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("NEED_LOGIN4");
         exceptionResolver.resolveException(request, response, null, new SystemException(AppHttpCodeEnum.NEED_LOGIN));
     }
 }

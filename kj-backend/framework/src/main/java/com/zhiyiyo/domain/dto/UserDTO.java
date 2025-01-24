@@ -5,9 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+// DTO 是数据传输对象，主要用于在不同系统、不同层之间传递数据。DTO 通常是一个扁平的对象，包含了简单的数据结构。它是为了减少网络请求的次数，将多个数据字段集中到一个对象中，从而进行高效的传输。
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -41,8 +41,13 @@ public class UserDTO {
      * 邮箱
      */
     @NotBlank(message = "邮箱不能为空")
-    @Email(message = "邮箱格式错误")
+    //@Email(message = "邮箱格式错误")
     private String email;
+
+    /**
+     * 微信賬號
+     */
+    private String wechatAccount;
 
     /**
      * 手机号

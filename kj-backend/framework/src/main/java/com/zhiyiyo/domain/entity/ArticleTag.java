@@ -1,14 +1,13 @@
 package com.zhiyiyo.domain.entity;
 
-import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * 文章-标签表(ArticleTag)表实体类
@@ -33,6 +32,7 @@ public class ArticleTag implements Serializable {
     /**
      * 标签 ID
      */
+    @TableId
     private Long tagId;
 
     /**

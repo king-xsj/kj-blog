@@ -1,26 +1,25 @@
 package com.zhiyiyo.domain.entity;
 
-import java.util.Date;
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 用户表(User)表实体类
+ * Entity 是实体类，通常是用来映射数据库中的表结构。每个 Entity 对象代表数据库中的一行数据，通常会映射到数据库的一个表。Entity 类通常会使用 JPA 注解（如 @Entity, @Id 等）来映射数据库。
  */
 @SuppressWarnings("serial")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @TableName("user")
-public class User implements Serializable {
+public class   User implements Serializable {
 
     private static final long serialVersionUID = 390745714345645196L;
 
@@ -68,9 +67,13 @@ public class User implements Serializable {
      * 邮箱
      */
     @NotBlank(message = "邮箱不能为空")
-    @Email(message = "邮箱格式错误")
-    private String email; 
-    
+    //@Email(message = "邮箱格式错误")
+    private String email;
+
+    /**
+     * 微信賬號
+     */
+    private String wechatAccount;
     /**
      * 手机号
      */    
@@ -89,7 +92,7 @@ public class User implements Serializable {
     /**
      * 创建人的用户id
      */    
-    private Long createBy; 
+    private Long createBy;
     
     /**
      * 创建时间
@@ -99,8 +102,9 @@ public class User implements Serializable {
     
     /**
      * 更新人
-     */    
-    private Long updateBy; 
+     */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Long updateBy;
     
     /**
      * 更新时间

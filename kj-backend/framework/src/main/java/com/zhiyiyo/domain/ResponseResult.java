@@ -5,7 +5,7 @@ import com.zhiyiyo.enums.AppHttpCodeEnum;
 
 import java.io.Serializable;
 
-
+//Domain 是指领域模型（也叫领域对象），它是系统中实际需要操作的数据对象。领域模型通常映射到数据库中的表格。在 DDD（领域驱动设计）中，Domain 类通常是业务逻辑的核心，代表系统中的业务概念。
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult<T> implements Serializable {
     private Integer code;
@@ -13,6 +13,7 @@ public class ResponseResult<T> implements Serializable {
     private T data;
 
     public ResponseResult() {
+
         this.code = AppHttpCodeEnum.SUCCESS.getCode();
         this.msg = AppHttpCodeEnum.SUCCESS.getMsg();
     }

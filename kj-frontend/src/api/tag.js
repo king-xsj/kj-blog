@@ -7,6 +7,19 @@ import request from "../utils/request"
 function getTagCountList() {
     return request.get("/tag/tagCountList")
 }
-
-
-export { getTagCountList }
+function addTag(tag) {
+    return request({
+        url: "/tag",
+        method: "post",
+        data: tag,
+        needAuthentication: true
+    })
+}
+function deleteTag(tag) {
+    return request({
+        url: `/tag/${tag.id}`,
+        method: "delete",
+        needAuthentication: true
+    })
+}
+export { getTagCountList, addTag, deleteTag }

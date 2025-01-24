@@ -1,5 +1,6 @@
 package com.zhiyiyo.constants;
 
+//Constants 类用于存储常量值，它通常包含一些全局使用的常量，如错误代码、状态码、配置项等。这些常量值是不会改变的，通常被设计为 public static final。
 public class SystemConstants {
     /**
      * 文章是正常发布状态

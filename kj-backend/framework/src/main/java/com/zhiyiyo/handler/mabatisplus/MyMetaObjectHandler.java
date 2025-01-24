@@ -11,11 +11,11 @@ import java.util.Date;
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-        Long userId = SecurityUtils.getUserId();
+        //Long userId = SecurityUtils.getUserId();
         this.setFieldValByName("createTime", new Date(), metaObject);
-        this.setFieldValByName("createBy", userId, metaObject);
+        //this.setFieldValByName("createBy", userId, metaObject);
         this.setFieldValByName("updateTime", new Date(), metaObject);
-        this.setFieldValByName("updateBy", userId, metaObject);
+        //this.setFieldValByName("updateBy", userId, metaObject);
     }
 
     @Override
