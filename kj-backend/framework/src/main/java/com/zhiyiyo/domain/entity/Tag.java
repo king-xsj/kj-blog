@@ -1,17 +1,17 @@
 package com.zhiyiyo.domain.entity;
 
-import java.util.Date;
-import java.io.Serializable;
-
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 标签表(Tag)表实体类
  *
- * @author makejava
+ * @author KJ
  * @since 2022-03-04 16:45:18
  */
 @SuppressWarnings("serial")

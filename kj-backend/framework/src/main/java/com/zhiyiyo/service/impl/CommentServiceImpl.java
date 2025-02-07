@@ -1,17 +1,16 @@
 package com.zhiyiyo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhiyiyo.constants.SystemConstants;
 import com.zhiyiyo.domain.ResponseResult;
+import com.zhiyiyo.domain.entity.Comment;
 import com.zhiyiyo.domain.entity.User;
 import com.zhiyiyo.domain.vo.CommentVo;
 import com.zhiyiyo.domain.vo.PageVo;
 import com.zhiyiyo.enums.AppHttpCodeEnum;
 import com.zhiyiyo.mapper.CommentMapper;
-import com.zhiyiyo.domain.entity.Comment;
 import com.zhiyiyo.service.CommentService;
 import com.zhiyiyo.service.UserService;
 import com.zhiyiyo.utils.Assert;
@@ -49,7 +48,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> impl
         }
 
         // 查询所有子评论
-        return ResponseResult.okResult(new PageVo<>(page.getTotal(), commentVos));
+        return ResponseResult.okResult(new PageVo<>(page.getCurrent(),page.getTotal(), commentVos));
     }
 
     @Override

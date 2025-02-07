@@ -12,7 +12,7 @@
             <div class="side-content">
                 <kim-admin-card />
                 <kim-hot-article-card />
-                <kim-category-card />
+                <kim-category-card />``
                 <kim-tag-card />
                 <kim-archive-card />
             </div>
@@ -26,7 +26,7 @@
                 <el-pagination background layout="prev, pager, next" :total="articleCount" :page-size="pageSize"
                     id="pagination" @current-change="onCurrentPageChanged" v-if="articleCount > 0"></el-pagination>
             </div>
-        </div>
+        </div>``
 
         <!-- 页脚 -->
         <kim-footer :adminName="$store.state.adminAbout.adminInfo.nickName" />

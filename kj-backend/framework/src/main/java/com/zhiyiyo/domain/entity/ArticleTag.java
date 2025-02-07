@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * 文章-标签表(ArticleTag)表实体类
  *
- * @author makejava
+ * @author kj
  * @since 2022-03-04 16:45:48
  */
 @SuppressWarnings("serial")

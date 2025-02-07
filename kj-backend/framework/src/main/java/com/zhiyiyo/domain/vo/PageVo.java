@@ -10,6 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PageVo<T> {
+    private Long current;
     private Long total;
     private List<T> rows;
 }

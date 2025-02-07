@@ -1,13 +1,13 @@
 package com.zhiyiyo.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.zhiyiyo.constants.SystemConstants;
 import com.zhiyiyo.domain.ResponseResult;
 import com.zhiyiyo.domain.dto.ArticleDTO;
 import com.zhiyiyo.domain.dto.ArticleQueryDTO;
+import com.zhiyiyo.domain.entity.Article;
 import com.zhiyiyo.domain.entity.ArticleTag;
 import com.zhiyiyo.domain.entity.Category;
 import com.zhiyiyo.domain.entity.Tag;
@@ -15,7 +15,6 @@ import com.zhiyiyo.domain.vo.*;
 import com.zhiyiyo.enums.AppHttpCodeEnum;
 import com.zhiyiyo.exception.SystemException;
 import com.zhiyiyo.mapper.ArticleMapper;
-import com.zhiyiyo.domain.entity.Article;
 import com.zhiyiyo.service.ArticleService;
 import com.zhiyiyo.service.ArticleTagService;
 import com.zhiyiyo.service.CategoryService;
@@ -25,7 +24,6 @@ import com.zhiyiyo.utils.BeanCopyUtils;
 import com.zhiyiyo.utils.DateUtils;
 import com.zhiyiyo.utils.RedisCache;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -117,7 +115,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
         }
 
         List<ArticleListVo> articleListVos = BeanCopyUtils.copyBeanList(articles, ArticleListVo.class);
-        return ResponseResult.okResult(new PageVo<>(page.getTotal(), articleListVos));
+        return ResponseResult.okResult(new PageVo<>(page.getCurrent(), page.getTotal(), articleListVos));
     }
 
     @Override
